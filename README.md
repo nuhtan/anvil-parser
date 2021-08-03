@@ -5,7 +5,7 @@
 [![Tests](https://github.com/matcool/anvil-parser/actions/workflows/run-pytest.yml/badge.svg)](https://github.com/matcool/anvil-parser/actions/workflows/run-pytest.yml)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/anvil-parser)](https://pypi.org/project/anvil-parser/)
 
-Simple parser for the [Minecraft anvil file format](https://minecraft.gamepedia.com/Anvil_file_format)
+Simple parser for the [Minecraft anvil file format](https://minecraft.gamepedia.com/Anvil_file_format) with a slight modification to read new 1.18 worlds with different height ranges. There might be issues with my implementation but it seems to work for me.
 # Installation
 This project is available on [PyPI](https://pypi.org/project/anvil-parser/) and can be installed with pip
 ```
