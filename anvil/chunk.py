@@ -76,9 +76,9 @@ class Chunk:
         Raises
         ------
         anvil.OutOfBoundsCoordinates
-            If Y is not in range of 0 to 15
+            If Y is not in range of -4 to 19
         """
-        if y < 0 or y > 15:
+        if y < -4 or y > 19:
             raise OutOfBoundsCoordinates(f'Y ({y!r}) must be in range of 0 to 15')
 
         try:
@@ -134,11 +134,11 @@ class Chunk:
             raise OutOfBoundsCoordinates(f'X ({x!r}) must be in range of 0 to 15')
         if z < 0 or z > 15:
             raise OutOfBoundsCoordinates(f'Z ({z!r}) must be in range of 0 to 15')
-        if y < 0 or y > 255:
-            raise OutOfBoundsCoordinates(f'Y ({y!r}) must be in range of 0 to 255')
+        if y < -64 or y > 319:
+            raise OutOfBoundsCoordinates(f'Y ({y!r}) must be in range of -64 to 319')
 
         if section is None:
-            section = self.get_section(y // 16)
+            section = self.get_section((y + 64) // 16 - 4)
             # global Y to section Y
             y %= 16
 
